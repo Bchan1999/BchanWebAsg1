@@ -1,0 +1,280 @@
+/* The background image of the whole site*/
+body {
+    background-image: url("../Images/herringbone.png");
+    background-repeat: repeat;
+}
+/* First grid*/
+.container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto;
+}
+.header{
+    background-color: #c9c9c9;
+    grid-row: 1;
+    grid-column: 1;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-family: "Limelight"; /*https://fonts.google.com/specimen/Limelight*/
+    color: white;
+    border-radius: 10px; 
+}
+.header h1 {
+    font-size: 70px;
+    text-align: center;
+}
+.header h2 {
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+/* https://www.w3schools.com/html/tryit.asp?filename=tryhtml_lists_menu */
+.galleryList {
+    overflow: auto; /*https://www.w3schools.com/cssref/pr_pos_overflow.asp*/
+    margin-left: 50px;
+    margin-right: 50px;
+    min-height: 50px;
+    background-color: white;
+}
+#gallList {
+    list-style-type: none;
+    white-space: nowrap;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+#gallList li {
+    display: inline-block; /*https://www.w3schools.com/css/css_navbar_horizontal.asp*/
+    text-align: center;
+    padding: 15px; 
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 25px; 
+    background-color: #969696;
+    color: white;
+    font-weight: bold;
+    cursor: pointer; /*https://www.w3schools.com/cssref/pr_class_cursor.asp*/
+    font-size: 30px;
+    
+}
+#gallList li:hover{
+    background-color: #757575;
+}
+/* the plus and minus icons */
+#plus {
+    height: 20px;
+    margin-left: 50px;
+    display: none;
+    cursor: pointer;
+}
+#minus {
+    height: 20px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+/* the gallery info */
+.galleryInfo {
+    background-color:#969696;
+    grid-area: gall;
+    height: 290px;
+    margin-left: 50px;
+    display: none;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px; 
+}
+.galleryInfo h2 {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "Limelight";
+   
+}
+.galleryInfo label {
+    padding-right: 5px;
+}
+.galleryInfo #galleryWeb:hover {
+    color: lightseagreen;
+}
+/* Google Map*/
+#map {
+    height: 680px;
+}
+#map {
+    grid-area: map;
+    margin-left: 50px;
+    display: none;
+}
+/*  The painting table */
+.paintings {
+    height: 1000px;
+    overflow: auto;
+    margin-right: 60px;
+    background-color:  white;
+    grid-area: paint;
+    display: none;
+}
+#paintTable {
+    width: 100%;
+}
+#paintTable th {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+#paintTable th, td {
+    border-bottom: 1px solid #969696;;
+}
+#paintTable thead {
+    background-color: #969696;
+}
+#paintTable #tab #title {
+    cursor: pointer;
+    color: #00284d;
+    font-weight: bold;
+    text-decoration: underline;
+}
+#paintTable #tab #title:hover {
+    text-decoration: underline;
+    background-color:  #757575;
+    color: white;
+    font-weight: bold;
+}
+#paintTable #artH:hover{
+    text-decoration: underline;
+}
+#paintTable #titleH:hover{
+    text-decoration: underline;
+}
+#paintTable #yearH:hover{
+    text-decoration: underline;
+}
+/* nested grid within container */
+.secondTable {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: 
+        'gall paint'
+        'map paint'
+        'single single';
+    grid-template-columns: 50% 50%;
+    grid-template-rows: minmax(10px, 400px), 800px, 500px;
+}
+/*Single Painting View */
+.singleView {
+    background-color: #969696;
+    grid-area: single;
+    margin-left: 50px;
+    margin-right: 60px;
+    display: none;
+    position: relative;
+    border-radius: 10px; 
+}
+.singleView #template span {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
+
+.singleView img {
+    float: left;
+    padding-bottom: 70px;
+    padding-top: 30px;
+ }
+ .singleView #info { 
+     left: 850px;
+     position: absolute;    
+     margin-right: 20px;
+ }
+.singleView ul {
+    padding-left: 0%;
+    background-color: #c9c9c9;
+    border-radius: 10px;
+    box-shadow: 5px 10px 18px #595959;
+    padding: 20px
+ }
+.singleView #info li{
+    list-style-type: none;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    padding: 2px;
+    color: white;
+}
+.singleView #info ul #des {
+    padding-top: 10px;
+    font-size: 18px;
+    font-weight: normal;
+}
+.singleView #info ul #link {
+    padding-top: 10px;
+}
+.singleView #info ul #link a:hover {
+    color: lightseagreen;
+}
+.singleView h2 {
+    color: white;
+    font-size: 40px;
+    font-family: "Limelight";
+}
+.singleView h3 {
+    color: white;
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+.singleView button {
+    position: absolute;
+    bottom: 20px;
+    right: 120px;
+    font-size: 15px;
+    background-color: #c9c9c9;;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 15px;
+    box-shadow: 5px 10px 18px #595959;
+    cursor: pointer;
+}
+/*Large Version of Painting  */
+.mod {
+    display: none;
+    background-color: black;
+}
+.mod #large img{
+    display: block; /*https://www.w3schools.com/howto/howto_css_image_center.asp*/
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.mod #exit {
+    position: absolute; /*https://www.w3schools.com/css/tryit.asp?filename=trycss_image_text_top_right*/
+    top: 25px;
+    right: 10px;
+    height: 50px;
+    cursor: pointer;
+}
+/*The two loading animations */
+#load1 {
+    height: 30px;
+    right: 50%;
+    top: 310px;
+    position: absolute;
+}
+#load2 {
+    height: 30px;
+    left: 300px;
+    bottom: 350px;
+    position: absolute;
+    display: none;
+}

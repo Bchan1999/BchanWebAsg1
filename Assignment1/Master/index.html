@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>COMP 3512 Assign 1</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Roboto:wght@100&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/Asg1.css">
+
+</head>
+
+<body>
+  <main class="container">
+    <div class="header">
+      <section>
+        <h1>COMP 3512 Assign 1</h1>
+        <h2>Brandon Chan</h2>
+      </section>
+    </div>
+    <img src="Images/plus.png" id="plus">
+    <img src="Images/minus.png" id="minus">
+    <div class="galleryList">
+      <img src="Images/load.gif" id="load1">
+      <img src="Images/load.gif" id="load2">
+      <ul id="gallList">
+        </li>
+      </ul>
+    </div>
+    <div class=secondTable>
+      <div class="galleryInfo">
+        <h2>Gallery Info</h2>
+        <label>Gallery Name:</label>
+        <span id="galleryName"></span></br>
+        <label>Native Name:</label>
+        <span id="galleryNative"></span></br>
+        <label>City:</label>
+        <span id="galleryCity"></span></br>
+        <label>Address:</label>
+        <span id="galleryAddress"></span></br>
+        <label>Country:</label>
+        <span id="galleryCountry"></span></br>
+        <label>Website:</label>
+        <span><a href="" id="galleryWeb"></a></span>
+      </div>
+      <div id="map"></div>
+      <div class="paintings">
+        <table id="paintTable">
+          <thead>
+            <th></th>
+            <th id="artH">Artist</th>
+            <th id="titleH">Title</th>
+            <th id="yearH">Year</th>
+          </thead>
+          <tbody id="tab"></tbody>
+        </table>
+      </div>
+      <div class="singleView">
+        <span id="template"></span>
+        <button type="button" id="Close">Close Button</button>
+      </div>
+    </div>
+  </main>
+  <div class="mod">
+    <span id="large"></span>
+    <img id="exit" src="Images/whiteX.png">
+  </div>
+  <script src="Javascript/Asg1.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfjb-aEbejho-YCxJlAWnGnC4jhMBFECI&callback=initMap"
+    async defer></script>
+</body>
+
+</html>
